@@ -1,0 +1,137 @@
+.cardItem {
+    background-color: #ffffff;
+    border-radius: 1.2rem;
+    box-shadow: 0 4px 10px #00000014;
+    padding: 1.2rem;
+    margin: 0.8rem 0;
+    transition: transform 0.2s ease;
+    list-style: none;
+
+    cursor: grab;
+
+    display: flex;
+    justify-content: space-between;
+
+    &:hover {
+        transform: scale(1.01);
+    }
+
+    &--dropping {
+        box-shadow: 0 0 12px #007bff66;
+        transition: box-shadow 0.2s ease-in-out;
+    }
+
+    &__content {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        margin-bottom: 5px;
+        gap: 8px;
+
+        position: relative;
+    }
+
+    &__navigation {
+        display: flex;
+        align-items: flex-end;
+        flex-direction: column;
+        gap: 8px;
+
+        position: relative;
+    }
+
+    &__options-button {
+        border: none;
+        background-color: transparent;
+        cursor: pointer;
+        border-radius: 4px;
+        font-size: 1.9rem;
+        width: 1.8rem;
+        height: 2.5rem;
+
+        transition: all 0.4s ease-in-out;
+
+        &:hover {
+            background-color: #e0e0e0;
+        }
+    }
+
+    &__title {
+        font-size: 2rem;
+        font-weight: 600;
+        color: #2d2d2d;
+        margin: 0;
+    }
+
+    &__description {
+        font-size: 1.5rem;
+        color: #555;
+        line-height: 1.4;
+        margin: 0;
+    }
+
+    &__status {
+        padding: 3px 6px;
+        border-radius: 6px;
+        font-size: 1rem;
+        font-weight: 600;
+        text-transform: uppercase;
+        background-color: #e0e0e0;
+        color: #333;
+
+        border: none;
+
+        cursor: pointer;
+
+        &--todo {
+            background-color: #fff7e6;
+            color: #d48806;
+        }
+
+        &--inProgress {
+            background-color: #e6f7ff;
+            color: #1890ff;
+        }
+
+        &--done {
+            background-color: #f6ffed;
+            color: #52c41a;
+        }
+    }
+
+    &__input,
+    &__textarea {
+        width: 100%;
+        font-size: 1.6rem;
+        font-family: inherit;
+        padding: 0.6rem 1rem;
+        border: 1px solid #ccc;
+        border-radius: 8px;
+        outline: none;
+        resize: vertical;
+        background-color: #fafafa;
+        color: #2d2d2d;
+        box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+        transition: border-color 0.2s ease, box-shadow 0.2s ease;
+
+        &:focus {
+            border-color: #4f46e5;
+            box-shadow: 0 0 0 2px rgba(79, 70, 229, 0.2);
+            background-color: #fff;
+        }
+    }
+
+    &__textarea {
+        min-height: 6rem;
+        line-height: 1.5;
+    }
+
+    &__change-status-container {
+        position: absolute;
+        width: 8rem;
+        font-size: 1.4rem;
+        right: 0;
+        top: 0;
+        z-index: 10;
+    }
+}

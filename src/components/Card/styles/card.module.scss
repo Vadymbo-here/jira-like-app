@@ -1,0 +1,230 @@
+.card {
+    min-width: 30rem;
+    max-width: 40rem;
+    padding: 1rem;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    background-color: $color-light-grey-2;
+    border: 1px solid $color-light-blue;
+    border-radius: 8px;
+
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+
+    transition: box-shadow 0.2s ease;
+
+    &:hover {
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
+    }
+
+    cursor: grab;
+
+
+    position: relative;
+
+    // &__button-container {
+    //     margin-top: 5px;
+    //     display: flex;
+    //     justify-content: space-around;
+    // }
+
+    &--dropping {
+        box-shadow: 0 0 12px rgba(0, 123, 255, 0.4);
+    }
+
+    &--dragging {
+        opacity: 0.7;
+    }
+
+
+    &__search-input {
+        margin-top: 1.3rem;
+        width: 100%;
+        padding: 0.8rem 1.2rem;
+
+        font-size: 1.4rem;
+        font-family: inherit;
+
+        background-color: #ffffff;
+        border: 1px solid $color-light-blue;
+        border-radius: 1.2rem;
+
+        box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+        transition: box-shadow 0.2s ease, border-color 0.2s ease;
+
+        &::placeholder {
+            color: #999;
+        }
+
+        &:focus {
+            outline: none;
+            border-color: darken($color-light-blue, 10%);
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+
+    }
+
+    &__menu-button {
+        color: black;
+        border: none;
+        border-radius: 4px;
+        padding: 5px 1rem;
+        font-size: 2rem;
+
+        cursor: pointer;
+
+        transition: all .4s ease-in-out;
+        align-items: center;
+
+        &:hover {
+            background-color: #e0e0e0;
+        }
+    }
+
+    &__header-container {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        position: relative;
+    }
+
+    &__title {
+        font-size: 3rem;
+    }
+
+    // &__add-button , 
+    &__delete-button {
+
+        // position: absolute;
+        // top: 1%;
+
+        color: white;
+        border: none;
+        border-radius: 4px;
+        padding: 5px 1rem;
+        font-size: 1.5rem;
+        cursor: pointer;
+        transition: background-color 0.2s ease, transform 0.1s ease;
+        // margin-bottom: 1rem;
+
+
+
+        &:active {
+            transform: scale(0.97);
+        }
+
+    }
+
+    &__delete-button {
+        background-color: $color-red-1;
+
+        right: 5%;
+
+        &:hover {
+            background-color: $color-red-2;
+        }
+
+    }
+
+    // &__add-button {
+    //     background-color: $color-green-1;
+
+    //     left: 5%;
+
+    //     &:hover {
+    //         background-color: $color-green-2;
+    //     }
+    // }
+
+    &__list {
+        list-style: none;
+
+        width: 100%;
+        margin: 1rem auto;
+        padding: 1rem;
+
+
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+
+
+        transition: box-shadow 0.2s ease;
+
+
+    }
+
+    &__addingTask {
+        display: flex;
+        flex-direction: column;
+
+        gap: 1rem;
+        background-color: #ffffff;
+        border-radius: 1.2rem;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+        padding: 1.2rem;
+        margin: 0.8rem 0;
+        transition: transform 0.2s ease;
+        list-style: none;
+
+        cursor: pointer;
+
+
+    }
+
+    &__input {
+        width: 100%;
+        font-size: 1.6rem;
+        font-family: inherit;
+        padding: 0.6rem 1rem;
+        margin-bottom: 0.8rem;
+        border: 1px solid #ccc;
+        border-radius: 8px;
+        outline: none;
+        background-color: #fafafa;
+        color: #2d2d2d;
+        box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+        transition: border-color 0.2s ease, box-shadow 0.2s ease;
+
+        &::placeholder {
+            color: #999;
+        }
+
+        &:focus {
+            border-color: #4f46e5;
+            box-shadow: 0 0 0 2px rgba(79, 70, 229, 0.2);
+            background-color: #fff;
+        }
+    }
+
+
+    &__addingTask-button {
+        cursor: pointer;
+        align-self: center;
+
+        width: 100%;
+        height: 100%;
+        padding: 0.8rem 1.6rem;
+        background-color: $color-green-1;
+        border: none;
+        border-radius: 0.8rem;
+
+        font-size: 1.6rem;
+        font-weight: 500;
+        color: #ffffff;
+
+        cursor: pointer;
+        transition: background-color 0.2s ease, transform 0.1s ease;
+
+        &:hover {
+            background-color: $color-green-2;
+        }
+
+        &:active {
+            transform: scale(0.97);
+        }
+    }
+}
