@@ -7,21 +7,31 @@ Make sure you have the following installed on your machine:
 Steps to Run the App Locally
 1) Clone the repository
    ```bash
-  git clone https://github.com/your-username/your-project-name.git  
+    git clone https://github.com/your-username/your-project-name.git  
+   ```
+ 
 3) Navigate to the project directory  
     ```bash
-  cd your-project-name  
+    cd your-project-name  
+    ```
 4) Install dependencies
-   Using npm:  
-     npm install  
-   Or using yarn:  
+   Using npm:
+      ```bash
+     npm install
+      ```  
+   Or using yarn:
+   ```bash
      yarn
-5) Start the development server
-   Using npm:  
+   ```
+6) Start the development server
+   Using npm:
+   ```bash
      npm run dev  
+   ```
    Or using yarn:  
-     yarn dev  
-
+```bash
+   yarn dev  
+```
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
 Currently, two official plugins are available:
