@@ -1,4 +1,24 @@
 # React + TypeScript + Vite
+Prerequisites
+Make sure you have the following installed on your machine:
+1) Node.js (v16 or higher) – https://nodejs.org/
+2) npm or yarn (comes with Node.js or can be installed separately)
+
+Steps to Run the App Locally
+1) Clone the repository 
+  git clone https://github.com/your-username/your-project-name.git
+2) Navigate to the project directory
+  cd your-project-name
+3) Install dependencies
+   Using npm:
+     npm install
+   Or using yarn:
+     yarn
+4) Start the development server
+   Using npm:
+     npm run dev
+   Or using yarn:
+     yarn dev
 
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
